@@ -1,11 +1,11 @@
-const is_qoddi = process.env.IS_HEROKU || false;
+const is_qoddi = process.env.IS_QODDI || false;
 
-const dbConfigHeroku = "mongodb+srv://admin:TJegPTvGhuNMMnPL@cluster0.ztfkq3k.mongodb.net/?retryWrites=true&w=majority";
+const dbConfigQoddi = "mongodb+srv://admin:TJegPTvGhuNMMnPL@cluster0.ztfkq3k.mongodb.net/?retryWrites=true&w=majority";
 
-const dbConfigLocal = "mysql://root:Password@localhost/lab_example";
+const dbConfigLocal = "mysql://root:password@localhost/lab_example";
 
 if (is_qoddi) {
-	var databaseConnectionString = dbConfigHeroku;
+	var databaseConnectionString = dbConfigQoddi;
 }
 else {
 	var databaseConnectionString = dbConfigLocal;
